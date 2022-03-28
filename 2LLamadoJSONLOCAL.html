@@ -1,9 +1,26 @@
+
+<div id="resultados"></div>
 <script>
 
     let url = './data/productos.json'
 
+    fetch(url).
+    then((res)=>res.json()).
+    then((json)=>{
+        mostrarInfo(json);
+    });
     
+    function mostrarInfo(data)
+    {
+        const nodo = document.querySelector("#resultados");
 
-
+        data.forEach((element)=>{
+            let li = document.createElement("li");
+            li.innerHTML=`id: ${element.id}
+                          Title: ${element.nombre}
+                          ${element.precio}`;
+            nodo.appendChild(li);
+        })
+    }
 
 </script>

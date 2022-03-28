@@ -1,0 +1,20 @@
+<script>
+    let url = 'http://hp-api.herokuapp.com/api/characters';
+
+    fetch(url)
+    .then((res)=>res.json())
+    .then((data)=>{
+        mostrarDatos(data);
+    });
+
+
+    function mostrarDatos(data)
+    {
+        console.log("DATOS", data);
+    }
+
+
+
+    
+
+</script>

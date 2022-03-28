@@ -15,10 +15,12 @@
 
     const datosHP = async () =>{
 
+     
         const res = await fetch(url);
         const json = await res.json();
 
         mostrarDatos(json);
+     
     }
 
 

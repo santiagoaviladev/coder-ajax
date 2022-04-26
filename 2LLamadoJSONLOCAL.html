@@ -4,4 +4,8 @@
 
     let url = './data/productos.json'
 
+    fetch(url)
+    .then((r)=>r.json())
+    .then((p)=>console.log(p));
+
 </script>

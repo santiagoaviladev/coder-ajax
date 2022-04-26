@@ -1,11 +1,25 @@
 <script>
-    let url = 'http://hp-api.herokuapp.com/api/characters';
+    let url = "https://swapi.dev/api/people/";
 
     fetch(url)
     .then((res)=>res.json())
     .then((data)=>{
-        mostrarDatos(data);
+        console.log("CON PROMESA", data);
     });
+
+
+    async function mostrarDatos()
+    {
+         const res = await fetch(url);
+         const dataFinal = await res.json();
+         console.log("CON AWAIT", dataFinal);
+    }
+
+    const datos = async ()=>{
+        //EQUIVALENTE a la de arriba
+    }
+
+    mostrarDatos();
 
 
     
